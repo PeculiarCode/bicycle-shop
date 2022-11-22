@@ -1,0 +1,14 @@
+<view class="index-container">
+  <text>计算器</text>
+  <input type='number'  placeholder="请输入一个数值" model:value="{{value1}}" />
+  <input type='number'   placeholder="请输入另一个数值" model:value="{{value2}}" />
+  <view class="btn-container">
+    <view  class="item"  wx:for="{{btnList}}" wx:key="id"  > 
+      <button data-index="{{index}}"  bindtap="handleClick"  type="primary">{{item.name}}</button>
+    </view>
+  </view>
+  <view class="result">
+    <text>计算结果</text>
+    <text>{{result}}</text>
+  </view>
+</view>
