@@ -1,29 +1,10 @@
-// index.js
-// 获取应用实例
-const app = getApp()
+const App = getApp()
 
 Page({
   data: {
     result: '',
     value1: '',
-    value2: '',
-    btnList: [{
-        id: 0,
-        name: '+'
-      },
-      {
-        id: 1,
-        name: '-'
-      },
-      {
-        id: 2,
-        name: '*'
-      },
-      {
-        id: 3,
-        name: '/'
-      },
-    ]
+    value2: ''
   },
   handleClick(e) {
     const index = e.target.dataset.index
@@ -45,6 +26,11 @@ Page({
     }
     this.setData({
       result: sum
+    })
+  },
+  handleClick() {
+    wx.navigateTo({
+      url: '/pages/log/log'
     })
   }
 })
