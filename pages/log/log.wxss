@@ -1,0 +1,10 @@
+.log-page {
+  padding: 10rpx;
+}
+.log-page .time {
+  margin-top: 20rpx;
+  color: #fff;
+}
+.log-page .movie-pic {
+  width: 207rpx;
+}

@@ -1,32 +1,10 @@
-// index.js
-// 获取应用实例
-const app = getApp()
+const App = getApp()
 
 Page({
   data: {
     result: '',
     value1: '',
-    value2: '',
-    count: '',
-    btnList: [
-      {
-        id: 0,
-        name: '加'
-      },
-      {
-        id: 1,
-        name: '减'
-      },
-      {
-        id: 2,
-        name: '乘'
-      },
-      {
-        id: 3,
-        name: '除'
-      }
-    ],
-    showNext: false
+    value2: ''
   },
   handleClick(e) {
     const index = e.target.dataset.index
@@ -50,28 +28,9 @@ Page({
       result: sum
     })
   },
-  handlePlay() {
-    const num = 28
-    const inputValue = this.data.count
-    if (inputValue == num) {
-      wx.showToast({
-        icon: 'none',
-        title: '哈哈,你答对了'
-      })
-      this.setData({
-        showNext: true
-      })
-      return
-    }
-    let desc = inputValue > num ? '大了' : '小了'
-    wx.showToast({
-      icon: 'none',
-      title: desc
-    })
-  },
-  handleNext(){
+  handleClick() {
     wx.navigateTo({
-      url: '/pages/note/note',
+      url: '/pages/log/log'
     })
   }
 })

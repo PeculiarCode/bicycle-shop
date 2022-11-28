@@ -1,29 +1,51 @@
-.index-container {
-  text-align: center;
-}
-.index-container input {
-  padding: 10rpx;
-  border: 1rpx solid #ccc;
-  width: 90%;
-  margin: 20rpx auto;
-}
-.index-container .btn-container {
+page {
+  width: 100%;
+  height: 100%;
+  margin: 0;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  background-color: #be9999;
 }
-.index-container .btn-container .item {
-  width: 80rpx;
-  height: 80rpx;
-  margin: 20rpx;
-  line-height: 80rpx;
-  padding: 0;
+.index-container .heart {
+  width: 100rpx;
+  height: 100rpx;
+  background-color: #dd2323;
+  position: relative;
+  animation: beat 1s infinite ease-in;
 }
-.index-container .game-container {
-  margin-top: 60rpx;
+.index-container .heart:before,
+.index-container .heart:after {
+  content: '';
+  position: absolute;
+  width: 100rpx;
+  height: 100rpx;
+  background-color: #ce6363;
+  border-radius: 50%;
 }
-.index-container .next {
-  width: 30%;
-  text-align: center;
-  margin-top: 100rpx;
+.index-container .heart:before {
+  left: 50rpx;
+}
+.index-container .heart:after {
+  top: -50rpx;
+}
+@keyframes beat {
+  0% {
+    transform: scale(1) rotate(-45deg);
+  }
+  40% {
+    transform: scale(1) rotate(-45deg);
+  }
+  55% {
+    transform: scale(1.3) rotate(-30deg);
+  }
+  70% {
+    transform: scale(1) rotate(-45deg);
+  }
+  85% {
+    transform: scale(1.3) rotate(-60deg);
+  }
+  100% {
+    transform: scale(1) rotate(-45deg);
+  }
 }

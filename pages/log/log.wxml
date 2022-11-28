@@ -1,0 +1,5 @@
+<view class="log-page">
+  <view class="time"> {{time}}</view>
+  <view>电影</view>
+  <image class="movie-pic" mode="widthFix" src="{{imgSrc}}"></image>
+</view>
