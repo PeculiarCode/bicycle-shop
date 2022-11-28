@@ -3,5 +3,18 @@
   "projectname": "noteBook",
   "setting": {
     "compileHotReLoad": true
+  },
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "笔记本",
+          "pathName": "pages/note/note",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        }
+      ]
+    }
   }
 }

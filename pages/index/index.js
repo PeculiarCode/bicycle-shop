@@ -7,23 +7,26 @@ Page({
     result: '',
     value1: '',
     value2: '',
-    btnList: [{
+    count: '',
+    btnList: [
+      {
         id: 0,
-        name: '+'
+        name: '加'
       },
       {
         id: 1,
-        name: '-'
+        name: '减'
       },
       {
         id: 2,
-        name: '*'
+        name: '乘'
       },
       {
         id: 3,
-        name: '/'
-      },
-    ]
+        name: '除'
+      }
+    ],
+    showNext: false
   },
   handleClick(e) {
     const index = e.target.dataset.index
@@ -45,6 +48,30 @@ Page({
     }
     this.setData({
       result: sum
+    })
+  },
+  handlePlay() {
+    const num = 28
+    const inputValue = this.data.count
+    if (inputValue == num) {
+      wx.showToast({
+        icon: 'none',
+        title: '哈哈,你答对了'
+      })
+      this.setData({
+        showNext: true
+      })
+      return
+    }
+    let desc = inputValue > num ? '大了' : '小了'
+    wx.showToast({
+      icon: 'none',
+      title: desc
+    })
+  },
+  handleNext(){
+    wx.navigateTo({
+      url: '/pages/note/note',
     })
   }
 })

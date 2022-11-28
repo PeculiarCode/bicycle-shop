@@ -7,6 +7,23 @@
   width: 90%;
   margin: 20rpx auto;
 }
-.index-container button {
-  margin: 20rpx auto;
+.index-container .btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.index-container .btn-container .item {
+  width: 80rpx;
+  height: 80rpx;
+  margin: 20rpx;
+  line-height: 80rpx;
+  padding: 0;
+}
+.index-container .game-container {
+  margin-top: 60rpx;
+}
+.index-container .next {
+  width: 30%;
+  text-align: center;
+  margin-top: 100rpx;
 }
