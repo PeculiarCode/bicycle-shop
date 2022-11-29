@@ -1,9 +1,14 @@
 {
-  "pages": ["pages/index/index", "pages/log/log", "pages/note/note"],
+  "pages": [
+    "pages/index/index",
+    "pages/log/log",
+    "pages/note/note",
+    "pages/trip/trip"
+  ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "SLMongo",
+    "navigationBarTitleText": "SLMango",
     "navigationBarTextStyle": "black"
   },
   "style": "v2",

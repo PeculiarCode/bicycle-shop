@@ -13,12 +13,15 @@
       <image class="icon" mode='widthFix' src="{{comment}}"></image>
     </view>
   </view>
-  <view wx:if="{{isCommit}}" class="comment-wrapper" style="height:{{commitStyle}}rpx">
+  <view class="secret">
+    <view wx:for="{{userList}}" wx:key="index"   class="user-comment">
+      <image class="user" src='{{item.img}}'></image>
+      <text class="descs">{{item.txt}}</text>
+    </view>
+  </view>
+  <view wx:if="{{isCommit}}" class="comment-wrapper">
     <textarea class="comment-value" cols="30" rows="10" model:value="{{inputValue}}"></textarea>
     <button class="commit" bindtap="handleSubmit">发表</button>
   </view>
-  <view wx:if="{{isSubmit && !isCommit}}" class="list">
-    <image  class="user"  src='{{user}}'></image>
-    <view class="item">{{inputValue}}</view>
-  </view>
+  <button type="primary" class="next" bindtap="handleTrip">开启下一段旅途</button>
 </view>

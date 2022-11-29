@@ -5,7 +5,9 @@ page {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #be9999;
+}
+.index-container {
+  /* 设置两个伪元素的位置 */
 }
 .index-container .heart {
   width: 100rpx;
@@ -20,7 +22,7 @@ page {
   position: absolute;
   width: 100rpx;
   height: 100rpx;
-  background-color: #ce6363;
+  background-color: #dd2323;
   border-radius: 50%;
 }
 .index-container .heart:before {

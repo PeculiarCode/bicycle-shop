@@ -10,6 +10,8 @@
 .log-page .log {
   width: 720rpx;
   border-radius: 10rpx;
+  margin: 10rpx auto;
+  display: block;
 }
 .log-page .desc {
   margin: 20rpx 0;
@@ -54,4 +56,27 @@
   height: 50rpx;
   border-radius: 50%;
   margin-right: 20rpx;
+}
+.log-page .secret {
+  display: flex;
+  flex-direction: column;
+}
+.log-page .secret .user-comment {
+  display: flex;
+  align-items: center;
+  margin: 30rpx 0;
+  position: relative;
+}
+.log-page .secret .user-comment .descs {
+  margin-left: 100rpx;
+}
+.log-page .secret .user-comment .user {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+}
+.log-page .next {
+  margin-top: 20rpx;
 }
