@@ -1,15 +1,11 @@
-import { formatTime } from '../../utils/util'
-
 Page({
   data: {
     time: '',
-    imgSrc: '../../image/prxd.png'
+    imgSrc: '../../images/prxd.png'
   },
 
   onLoad() {
     const time = new Date()
-    this.setData({
-      time: formatTime(time)
-    })
+    console.log(time)
   }
 })
