@@ -13,6 +13,13 @@
           "query": "",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "日志",
+          "pathName": "pages/log/log",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }

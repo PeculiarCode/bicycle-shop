@@ -1,5 +1,24 @@
 <view class="log-page">
-  <view class="time"> {{time}}</view>
-  <view>电影</view>
-  <image class="movie-pic" mode="widthFix" src="{{imgSrc}}"></image>
+  <view class="title font36">2018/8/16 9:19</view>
+  <image mode="widthFix" class="log" src="{{imgSrc}}"></image>
+  <view class="desc">今天有扎头发额</view>
+  <view class="footer">
+    <view class="star" bindtap="handleStar">
+      <text>{{starText}}</text>
+      <image wx:if="{{like}}" class="icon" mode='widthFix' src="{{likeIcon}}"></image>
+      <image wx:else class="icon" mode='widthFix' src="{{dislikeIcon}}"></image>
+    </view>
+    <view class="comment" bindtap="handleComment">
+      <text>{{commitText}}</text>
+      <image class="icon" mode='widthFix' src="{{comment}}"></image>
+    </view>
+  </view>
+  <view wx:if="{{isCommit}}" class="comment-wrapper" style="height:{{commitStyle}}rpx">
+    <textarea class="comment-value" cols="30" rows="10" model:value="{{inputValue}}"></textarea>
+    <button class="commit" bindtap="handleSubmit">发表</button>
+  </view>
+  <view wx:if="{{isSubmit && !isCommit}}" class="list">
+    <image  class="user"  src='{{user}}'></image>
+    <view class="item">{{inputValue}}</view>
+  </view>
 </view>
