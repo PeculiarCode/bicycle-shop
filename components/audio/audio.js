@@ -7,9 +7,9 @@ Component({
     pauseIcon: App.IMG + '/web_icon/pause.png',
     SongEndTime: '00:00',
     poster:
-      'http://p3.music.126.net/Iu1umT1npxoa4J5Y4E2Hrw==/109951166384924695.jpg',
-    name: '老鼠爱大米',
-    author: '抖音女生版本',
+      'https://p2.music.126.net/hFHFusqewJ2Uwy8qjpN1uQ==/109951168072456069.jpg',
+    name: '2022年卡塔尔世界杯',
+    author: 'BTS (防弹少年团)',
     processTime: 0,
     count: 1
   },
@@ -21,7 +21,7 @@ Component({
       this.audio = wx.createInnerAudioContext({
         useWebAudioImplement: false // 是否使用 WebAudio 作为底层音频驱动，默认关闭。对于短音频、播放频繁的音频建议开启此选项，开启后将获得更优的性能表现。由于开启此选项后也会带来一定的内存增长，因此对于长音频建议关闭此选项
       })
-      this.audio.src = 'https://web-app.dtbird.cn/web_icon/video_cat.m4a'
+      this.audio.src = 'https://web-app.dtbird.cn/web_icon/music.m4a'
       this.audio.onCanplay(() => {
         let timer = setInterval(() => {
           if (this.audio.duration != 0) {
