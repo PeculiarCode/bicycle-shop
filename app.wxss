@@ -5,3 +5,7 @@ page {
 .font36 {
   font-size: 36rpx;
 }
+image{
+  display: block;
+}
+

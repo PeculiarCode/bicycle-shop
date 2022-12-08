@@ -1,5 +1,6 @@
 Page({
   data: {
+    mp3Url:'https://web-app.dtbird.cn/web_icon/video_cat.mp4',
     list: [
       {
         id: 0,
@@ -7,8 +8,7 @@ Page({
         word:
           '下雪的日子,我又坐上了大巴车,去往诗意的远方,这一路的风景尽收眼底^_^',
         time: '2018/12/08 19:30',
-        audio:
-          'http://m10.music.126.net/20221129225223/dea29c4721a4e8167840af8e7c3903bc/ymusic/ff04/5838/d170/0a2672f3615fb7e58fa71c93fabe64df.mp3',
+        audio: 'https://web-app.dtbird.cn/web_icon/video_cat.mp4',
         poster:
           'http://p3.music.126.net/Iu1umT1npxoa4J5Y4E2Hrw==/109951166384924695.jpg',
         name: '老鼠爱大米',
@@ -63,16 +63,34 @@ Page({
     duration: 500,
     audioSrc: ''
   },
-  onReady() {
-    this.audioCtx = wx.createAudioContext('myAudio')
-    // this.audioCtx.setSrc(
-    //   ''
-    // )
+  onLoad(){
+  //  this.innerAudioContext = wx.createInnerAudioContext({
+  //     useWebAudioImplement: false // 是否使用 WebAudio 作为底层音频驱动，默认关闭。对于短音频、播放频繁的音频建议开启此选项，开启后将获得更优的性能表现。由于开启此选项后也会带来一定的内存增长，因此对于长音频建议关闭此选项
+  //   })
+  //   this.innerAudioContext.src = 'https://web-app.dtbird.cn/web_icon/video_cat.mp4'
   },
-  audioPlay() {
+  handePlay(){
+    this.innerAudioContext.play() // 播放
+  },
+  handleStop(){
+    this.innerAudioContext.pause() // 暂停
+  },
+  onReady() { 
+    // const innerAudioContext = wx.createInnerAudioContext()
+    // // innerAudioContext.autoplay = true
+    // innerAudioContext.src = 'https://web-app.dtbird.cn/web_icon/video_cat.mp4'
+    // innerAudioContext.onPlay(() => {
+    //   console.log('开始播放')
+    // })
+    // innerAudioContext.onError((res) => {
+    //   console.log(res.errMsg)
+    //   console.log(res.errCode)
+    // })
+  },
+  audioPlay: function () {
     this.audioCtx.play()
   },
-  audioPause() {
+  audioPause: function () {
     this.audioCtx.pause()
-  }
+  },
 })

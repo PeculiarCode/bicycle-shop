@@ -1,3 +1,4 @@
 App({
-  onLaunch() {}
+  onLaunch() {},
+  IMG: 'https://web-app.dtbird.cn'
 })

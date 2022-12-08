@@ -1,6 +1,6 @@
 <view class="trip-page">
   <view class="time">毕业那年</view>
-  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <!-- <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
     <block wx:for="{{list}}" wx:key="id">
       <swiper-item>
         <image mode="widthFix" class="life" src="{{item.img}}"></image>
@@ -9,6 +9,8 @@
         <audio class="voice" poster="{{item.poster}}" name="{{item.name}}" author="{{item.author}}" src="{{item.audio}}" id="myAudio" controls loop></audio>
       </swiper-item>
     </block>
-  </swiper>
-  <view class="desc">这些歌曲都是在网易云爬出来的,有些歌曲还是需要vip,不好爬取,所以先爬了一些不收费歌曲,这些都是一些老歌了,不过有时候听听还是比较有意思的</view>
+  </swiper> -->
+  <PeAudio></PeAudio>
+  <!-- <button bindtap="handePlay">播放</button>
+  <button bindtap="handleStop">停止</button> -->
 </view>
