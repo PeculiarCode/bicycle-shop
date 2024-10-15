@@ -1,3 +1,0 @@
-<view class="index-container">
-  <view class="heart" bindtap="handleClick"></view>
-</view>
