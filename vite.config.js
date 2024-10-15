@@ -4,6 +4,7 @@ import { join } from 'path'
 // https://vitejs.dev/config/
 
 export default defineConfig({
+  base: './',
   resolve: {
     // eslint-disable-next-line no-undef
     alias: { '@': join(__dirname, './src/') },
