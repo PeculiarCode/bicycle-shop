@@ -12,7 +12,7 @@ const routes = [
     element: <Page404 />
   },
   {
-    path: '/',
+    path: '/bicycle-shop',
     isLayout: false,
     Component: Index,
     element: <Navigate to='/index' replace />
